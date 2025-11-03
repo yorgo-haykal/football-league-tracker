@@ -1,4 +1,4 @@
-package com.example.footballleaguetracker.data;
+package com.example.leaguetracker.data;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
