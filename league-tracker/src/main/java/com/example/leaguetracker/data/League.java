@@ -2,15 +2,20 @@ package com.example.leaguetracker.data;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 public class League {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+    @NotBlank(message = "League name is required")
     String name;
+    @NotBlank(message = "Country is required")
     String country;
+    @NotBlank(message = "Season is required")
     String season;
 
 
