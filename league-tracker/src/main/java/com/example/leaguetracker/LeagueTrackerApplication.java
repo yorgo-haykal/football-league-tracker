@@ -18,11 +18,20 @@ public class LeagueTrackerApplication {
     @Bean
     CommandLineRunner demo(LeagueRepository leagueRepository) {
         return args -> {
-            League league1 = new League();
-            league1.setName("Ligue 1");
-            league1.setCountry("France");
-            league1.setSeason("2025/2026");
-            leagueRepository.save(league1);
+            if (leagueRepository.count() == 0) {
+                League league1 = new League();
+                league1.setName("Ligue 1");
+                league1.setCountry("France");
+                league1.setSeason("2025/2026");
+
+                League league2 = new League();
+                league2.setName("Premier League");
+                league2.setCountry("England");
+                league2.setSeason("2025/2026");
+
+                leagueRepository.save(league1);
+                leagueRepository.save(league2);
+            }
         };
     }
 }
