@@ -1,10 +1,11 @@
 # Football League Tracker
 
 A simple Java Spring Boot project using multiple microservices to manage football leagues, teams, matches, and scores.
-
+### Git repo
+https://github.com/yorgo-haykal/football-league-tracker
 ---
 
-## 📦 Services
+## Services
 
 | Service | Description | Port |
 |----------|--------------|------|
@@ -17,7 +18,7 @@ Each service has its own database and REST API.
 
 ---
 
-## ▶️ Run the Project
+## Run the Project
 
 ### Option 1 — IntelliJ IDEA
 1. Open the project in IntelliJ.  
@@ -32,7 +33,7 @@ Each service has its own database and REST API.
 ./gradlew :score-service:bootRun
 ```
 
-## 🧠 Initial Data
+## Initial Data
 
 Each service loads example data automatically at startup:
 
